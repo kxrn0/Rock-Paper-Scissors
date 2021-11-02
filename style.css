@@ -17,7 +17,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 15px rgb(87, 87, 97);
     background: rgb(147, 136, 212);
-    margin: 100px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,15 +35,16 @@ body {
     padding: 15px;
     background: rgb(229, 230, 235);
     border-radius: 50%;
-    box-shadow: 0 5px 10px rgb(22, 21, 21);
+    box-shadow: 0 5px 15px rgb(22, 21, 21);
+    transition: 0.1s;
 }
 
 #choices div:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 #choices div:active {
-    background: red;
+    background: rgb(187, 163, 163);
 }
 
 /* SCORES */
@@ -77,6 +78,80 @@ body {
 
 #feedback h2 {
     font-size: 70px;
+}
+
+.green-text {
     color: rgb(153, 255, 0);
 }
 
+.red-text {
+    color: rgb(194, 12, 12);
+}
+
+.gray-text {
+    color: rgb(224, 213, 213);
+}
+
+/* MODAL */
+
+#modal {    
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(89, 84, 129, 0.5);
+}
+
+.modal-content {
+    width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 50px rgb(57, 55, 63);   
+}
+
+.game-over {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.results {
+    margin: 40px;
+    font-size: 30px;
+}
+
+#play-again {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-color: rgb(202, 202, 235);
+    background: rgb(222, 222, 233);
+}
+
+#play-again:hover {
+    background:rgb(205, 205, 218);
+}
+
+#play-again:active {
+    background: rgb(151, 151, 172);
+}
+
+.modal-content-red {
+    background: red;
+    color: rgb(227, 243, 242);
+}
+
+.modal-content-green {
+    background: rgb(73, 211, 31);
+    color: rgb(49, 46, 63);
+}
+
+.modal-content-gray {
+    background: rgb(176, 180, 175);
+    color: rgb(49, 46, 63);
+}
