@@ -6,14 +6,6 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
-    //p : r -> c : s 
-    //p : p -> c : r
-    //p : s -> c : p
-
-    //c : r -> p : s
-    //c : p -> p : r
-    //c : s -> p : p
-
     //I'll fix the case issue with css
     if (playerSelection == "rock" && computerSelection == "scissors" ||
         playerSelection == "paper" && computerSelection == "rock" ||
@@ -59,34 +51,3 @@ function game() {
     else
         console.log("It's a tie.");
 }
-
-game();
-
-// //test playRound()
-// let player, computer;
-// player = [];
-// computer = [];
-// for (let i = 0; i < 100; i++) {
-//     player.push(computerPlay());
-//     computer.push(computerPlay());
-//     console.log(`${playRound(player[i], computer[i])} :: ${player[i]} ; ${computer[i]}`);
-// }
-
-// //test computerPlay()
-// let rock, paper, scissors;
-// rock = 0;
-// paper = 0;
-// scissors = 0;
-// for (let i = 0; i < 1e6; i++)
-//     switch (computerPlay()) {
-//         case "rock":
-//             rock++;
-//             break;
-//         case "paper":
-//             paper++;
-//             break;
-//         case "scissors":
-//             scissors++;
-//             break;
-//     }
-// console.log(`rock : ${rock / 1e4}%, paper : ${paper / 1e4}, scissors : ${scissors / 1e4}`);
