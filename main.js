@@ -9,7 +9,7 @@ const modalContent = document.querySelector(".modal-content");
 const results = document.querySelector(".results");
 const playAgain = document.getElementById("play-again");
 
-let userScore, computerScore, turns, maxTurns;
+let userScore, computerScore, count;
 
 function computerPlay() {
     let rnd = Math.floor(Math.random() * 3);
@@ -35,12 +35,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(playerSelection) {
-    if (!turns) {
+    if (!count) {
         score.style.display = "block";
         feedback.style.display = "block";
+        count++;
     }
 
-    if (turns++ < maxTurns) {
+    if (userScore != 5 && computerScore != 5) {
         let computerSelection = computerPlay();
         let winner = playRound(playerSelection, computerSelection);
         let color, message, result;
@@ -126,8 +127,7 @@ function reset() {
     modalContent.classList.remove("modal-content-gray");
     userScore = 0;
     computerScore = 0;
-    turns = 0;
-    maxTurns = 5;
+    count = 0;
 }
 
 playAgain.addEventListener("click", () => reset());
